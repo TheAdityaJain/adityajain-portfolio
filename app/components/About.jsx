@@ -116,14 +116,13 @@ export default function About() {
 
                 <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
                   <p>
-                    Hey there! I'm a passionate Computer Science student who fell in love with coding and hasn't looked
+                    I'm a passionate Computer Science student who fell in love with coding and hasn't looked
                     back since. My journey started with a simple "Hello World" and has evolved into building full-stack
                     applications that solve real problems.
                   </p>
                   <p>
                     I believe in writing clean, efficient code and staying curious about new technologies. When I'm not
-                    debugging or learning a new framework, you'll find me exploring the latest in web development or
-                    contributing to open-source projects.
+                    debugging or learning a new framework, you'll find me exploring the latest in web development.
                   </p>
                   <p>
                     Currently focused on mastering modern web technologies while building projects that make a
