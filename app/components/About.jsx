@@ -9,7 +9,6 @@ export default function About() {
   const tabs = [
     { id: "bio", label: "Bio", icon: <User className="h-4 w-4" /> },
     { id: "journey", label: "Journey", icon: <GraduationCap className="h-4 w-4" /> },
-    { id: "workspace", label: "Workspace", icon: <Briefcase className="h-4 w-4" /> },
   ]
 
   const journeyData = [
@@ -47,7 +46,7 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="py-20 bg-black relative overflow-hidden">
+    <section id="about" className="py-12 bg-black relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-10">
         {Array.from({ length: 20 }, (_, i) => (
@@ -67,12 +66,7 @@ export default function About() {
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-5 py-2 bg-gray-900/80 border border-green-500/30 rounded-xl mb-6 backdrop-blur-sm">
-            <Terminal className="h-4 w-4 text-green-400" />
-            <span className="text-sm text-gray-300 font-mono">about.developer</span>
-          </div>
-
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-mono">
             <span className="text-green-400">const </span>
             <span className="text-white">aboutMe</span>
@@ -207,7 +201,7 @@ export default function About() {
         </div>
 
         {/* Closing Brace */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <span className="text-4xl font-bold text-orange-400 font-mono">{`}`}</span>
         </div>
       </div>

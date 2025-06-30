@@ -26,7 +26,7 @@ export default function Projects() {
       description:
         "An interactive dummy dashboard that provides real-time dummy data, dummy, and dummy visualizations using dummy.js.",
       image: "/projects/dummy-project.png", // Add your image here
-      technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
+      technologies: ["React", "Next.js", "Tailwind CSS", "Vercel"],
       liveUrl: "#",
       githubUrl: "#",
     }
