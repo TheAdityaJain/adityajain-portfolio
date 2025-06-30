@@ -9,7 +9,12 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      const aboutSection = document.getElementById("about")
+      if (aboutSection) {
+        const aboutTop = aboutSection.offsetTop
+        const scrollPosition = window.scrollY + 100 // Add some offset for better timing
+        setScrolled(scrollPosition >= aboutTop)
+      }
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)

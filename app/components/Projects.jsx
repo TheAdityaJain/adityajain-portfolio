@@ -1,5 +1,6 @@
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
+import Balatro from "./ui/Balatro"
 
 export default function Projects() {
   const projects = [
@@ -7,7 +8,7 @@ export default function Projects() {
       title: "LumiFlix",
       description:
         "A full-stack responsive solution with React, Node.js, and TailwindCSS. Features include dynamic movie search engine, streaming platform. ",
-      image: "/projects/LumiFlix.png",
+      image: "/images/LumiFlix.png",
       technologies: ["React", "Node.js", "Python", "TailwindCSS", "Flask"],
       liveUrl: "https://lumi-flix.vercel.app/",
       githubUrl: "https://github.com/TheAdityaJain/LumiFlix-MovieStreamingApplication",
@@ -16,7 +17,7 @@ export default function Projects() {
       title: "Portfolio",
       description:
         "A modern, responsive, and minimal portfolio website built using Next.js and React, styled with Tailwind CSS and enhanced using Lucide Icons. This site showcases my skills as a Full-Stack Developer, highlighting my technical strengths, personal projects. ",
-      image: "/projects/Portfolio.png",
+      image: "/images/Portfolio.png",
       technologies: ["React", "Next.js", "TailwindCSS"],
       liveUrl: "#",
       githubUrl: "#",
@@ -25,20 +26,39 @@ export default function Projects() {
       title: "Dummy Project",
       description:
         "An interactive dummy dashboard that provides real-time dummy data, dummy, and dummy visualizations using dummy.js.",
-      image: "/projects/dummy-project.png", // Add your image here
+      image: "/placeholder.svg?height=300&width=400",
       technologies: ["React", "Next.js", "Tailwind CSS", "Vercel"],
       liveUrl: "#",
       githubUrl: "#",
-    }
+    },
   ]
 
   return (
-    <section id="projects" className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="projects" className="py-20 relative overflow-hidden">
+      {/* Balatro Background */}
+      <div className="absolute inset-0">
+        <Balatro
+          isRotate={false}
+          mouseInteraction={true}
+          pixelFilter={2000}
+          color1="#1e293b"
+          color2="#0f172a"
+          color3="#020617"
+          contrast={2.5}
+          lighting={0.3}
+          spinSpeed={3.0}
+          spinAmount={0.15}
+        />
+      </div>
+
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold mb-4 text-white">Featured Projects</h2>
           <div className="w-20 h-1 bg-blue-400 mx-auto mb-8"></div>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-200 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and experience
           </p>
         </div>
@@ -47,7 +67,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-black border border-gray-700 rounded-xl overflow-hidden hover:bg-gray-900 transition-colors"
+              className="bg-black/80 backdrop-blur-sm border border-gray-700/50 rounded-xl overflow-hidden hover:bg-black/90 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="relative h-64">
                 <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
@@ -57,7 +77,10 @@ export default function Projects() {
                 <p className="text-gray-200 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 bg-blue-600/80 backdrop-blur-sm text-white text-sm rounded-full"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -65,7 +88,7 @@ export default function Projects() {
                 <div className="flex gap-4">
                   <a
                     href={project.liveUrl}
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors flex items-center gap-2"
+                    className="px-4 py-2 bg-blue-600/80 hover:bg-blue-700/80 backdrop-blur-sm text-white rounded-xl transition-colors flex items-center gap-2"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -74,7 +97,7 @@ export default function Projects() {
                   </a>
                   <a
                     href={project.githubUrl}
-                    className="px-4 py-2 border border-gray-500 text-white hover:bg-gray-600 rounded-xl transition-colors flex items-center gap-2"
+                    className="px-4 py-2 border border-gray-500/50 text-white hover:bg-gray-600/50 backdrop-blur-sm rounded-xl transition-colors flex items-center gap-2"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
