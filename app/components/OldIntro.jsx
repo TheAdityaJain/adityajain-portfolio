@@ -167,7 +167,7 @@ export default function Intro() {
               </button>
 
               <a
-                href="/images/AdityaJainResume.pdf"
+                href="/projects/AdityaJainResume.pdf"
                 download
                 className="group relative px-8 py-4 bg-transparent border-2 border-slate-600 hover:border-slate-400 rounded-xl font-semibold text-slate-300 hover:text-white hover:bg-slate-800/50 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm font-sans"
               >
