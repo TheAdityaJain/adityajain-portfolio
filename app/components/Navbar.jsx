@@ -35,8 +35,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="flex justify-between md:justify-between justify-center items-center py-8 md:py-6 relative">
-          <div className="flex items-center space-x-3 md:space-x-2 md:relative absolute left-1/2 transform -translate-x-1/2 md:transform-none md:left-auto">
+        <div className="flex justify-between items-center py-8 md:py-6">
+          <div className="flex items-center space-x-3 md:space-x-2">
             <Code2 className="h-10 w-10 md:h-8 md:w-8 text-blue-400" />
             <span className="text-2xl md:text-xl font-bold whitespace-nowrap">Aditya Jain</span>
           </div>
@@ -55,7 +55,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden absolute right-0">
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-3 md:p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
