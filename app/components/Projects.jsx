@@ -1,6 +1,6 @@
-import { ExternalLink, Github } from "lucide-react"
-import Image from "next/image"
-import Balatro from "./ui/Balatro"
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
+import Balatro from "./ui/Balatro";
 
 export default function Projects() {
   const projects = [
@@ -11,7 +11,8 @@ export default function Projects() {
       image: "/images/LumiFlix.png",
       technologies: ["React", "Node.js", "Python", "TailwindCSS", "Flask"],
       liveUrl: "https://lumi-flix.vercel.app/",
-      githubUrl: "https://github.com/TheAdityaJain/LumiFlix-MovieStreamingApplication",
+      githubUrl:
+        "https://github.com/TheAdityaJain/LumiFlix-MovieStreamingApplication",
     },
     {
       title: "Portfolio",
@@ -23,15 +24,15 @@ export default function Projects() {
       githubUrl: "#",
     },
     {
-      title: "Dummy Project",
+      title: "Vybe",
       description:
-        "An interactive dummy dashboard that provides real-time dummy data, dummy, and dummy visualizations using dummy.js.",
-      image: "/placeholder.svg?height=300&width=400",
+        "Vybe is a modern skincare landing page built with Next.js and Framer Motion, featuring dynamic animations, responsive design, and an intuitive user experience with eco-friendly brand messaging.",
+      image: "/images/Vybe.png",
       technologies: ["React", "Next.js", "Tailwind CSS", "Vercel"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://vybe4you.vercel.app/",
+      githubUrl: "https://github.com/TheAdityaJain/vybe4you",
     },
-  ]
+  ];
 
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
@@ -56,10 +57,13 @@ export default function Projects() {
 
       <div className="max-w-7xl mx-auto px-4 relative z-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-white">Featured Projects</h2>
+          <h2 className="text-4xl font-bold mb-4 text-white">
+            Featured Projects
+          </h2>
           <div className="w-20 h-1 bg-blue-400 mx-auto mb-8"></div>
           <p className="text-gray-200 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience
+            Here are some of my recent projects that showcase my skills and
+            experience
           </p>
         </div>
 
@@ -70,10 +74,17 @@ export default function Projects() {
               className="bg-black/80 backdrop-blur-sm border border-gray-700/50 rounded-xl overflow-hidden hover:bg-black/90 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="relative h-64">
-                <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {project.title}
+                </h3>
                 <p className="text-gray-200 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
@@ -111,5 +122,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
